@@ -1,5 +1,5 @@
 # MotionLayoutPager-android
-Example of MotionLayout pager
+Example of implementing pager using MotionLayout.  
 
 <img src="/screenshot/example.gif" width="40%">
  
