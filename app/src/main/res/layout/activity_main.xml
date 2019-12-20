@@ -26,23 +26,56 @@
         app:layoutDescription="@xml/motion_list"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/leftView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FF00FF" />
+            app:cardElevation="4dp">
 
-        <TextView
+            <TextView
+                android:id="@+id/leftTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textColor="?attr/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/rightView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#00FFFF" />
+            app:cardElevation="4dp">
 
-        <TextView
+            <TextView
+                android:id="@+id/rightTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textColor="?attr/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/centerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#00FF00" />
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/centerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textColor="?attr/colorOnSurface" />
+
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.motion.widget.MotionLayout>
 

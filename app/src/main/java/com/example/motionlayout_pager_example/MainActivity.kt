@@ -1,5 +1,6 @@
 package com.example.motionlayout_pager_example
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -73,19 +74,20 @@ class MainActivity : AppCompatActivity() {
         updateView()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateView() {
-        centerView.text = "${itemList[currentPosition]}"
+        centerTextView.text = "Item\n${itemList[currentPosition]}"
 
-        rightView.text = if (currentPosition == itemList.lastIndex) {
-            "${itemList.first()}"
+        rightTextView.text = if (currentPosition == itemList.lastIndex) {
+            "Item\n${itemList.first()}"
         } else {
-            "${itemList[currentPosition + 1]}"
+            "Item\n${itemList[currentPosition + 1]}"
         }
 
-        leftView.text = if (currentPosition == 0) {
-            "${itemList.last()}"
+        leftTextView.text = if (currentPosition == 0) {
+            "Item\n${itemList.last()}"
         } else {
-            "${itemList[currentPosition - 1]}"
+            "Item\n${itemList[currentPosition - 1]}"
         }
     }
 }
