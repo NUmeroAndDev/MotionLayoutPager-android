@@ -2,7 +2,6 @@ package com.example.motionlayout_pager_example
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -50,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                 when (currentId) {
-                    R.id.move_left -> {
+                    R.id.move_left_to_right -> {
                         if (currentPosition > 0) {
                             currentPosition--
                         } else {
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                         motionLayout?.progress = 0F
                         updateView()
                     }
-                    R.id.move_right -> {
+                    R.id.move_right_to_left -> {
                         if (currentPosition < itemList.lastIndex) {
                             currentPosition++
                         } else {
