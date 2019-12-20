@@ -20,11 +20,31 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layoutDescription="@xml/motion_list"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/leftView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF00FF" />
+
+        <TextView
+            android:id="@+id/rightView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFF" />
+
+        <TextView
+            android:id="@+id/centerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FF00" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
